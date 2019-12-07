@@ -10,11 +10,11 @@ We present a set of products in which we are trying to determine actions to perf
 The data files contain historical sales data and active inventory. More details below.
 
 
-* **Goal:**
+# **Goal:**
 1. We want to determine which products from the store inventory are (negatively) correlated, so that we can splitt them into the ones that should be retained for sell (in particular, applying promotional actions) and the ones to discard (or to decrease the amount of order requests).
 2. Among possible ways forward, we intend to build a ***binary classifier*** with a list of products ID which could be retained in the inventory or list of products for which further actions need to be done.
 
-**Dataset**
+# **Dataset**
 In addition to all publicly available data, we have daily sales and associated waste for each product reaching back 1.5 year. We also have the physical location of a subset around 15% of products.
 
 Dataset looks like this:
@@ -52,7 +52,7 @@ Between two variables, this concept generally refers to to their ‘relatedness�
 Nevertheless, beware that “Correlation does not imply causation”. Spurious statistical associations can be found in a multitude of quantities, simply due to chance. Often, a relationship may appear to be causal through high correlation due to some unobserved variables.
 
 Assuming we deal with linear data,<br>
-the Pearson Correlation coefficient helps quantifying the degree to which a relationship between two variables can be described by a line. 
+the ***Pearson Correlation coefficient*** (also known as Pearson's r, most common measure of correlation)helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as “the covariance between two vectors, normalized by the product of their standard deviations”.
 
 
 
@@ -66,6 +66,7 @@ the Pearson Correlation coefficient helps quantifying the degree to which a rela
 [Solving Case study : Optimize the Products Price for an Online Vendor](https://www.analyticsvidhya.com/blog/2016/07/solving-case-study-optimize-products-price-online-vendor-level-hard/)<br>
 [Finding Correlations in Non-Linear Data](https://www.freecodecamp.org/news/how-machines-make-predictions-finding-correlations-in-complex-data-dfd9f0d87889/)<br>
 [Exploratory Data Analysis (EDA) and Data Visualization with Python](https://kite.com/blog/python/data-analysis-visualization-python/)<br>
+[Introduction to Correlation with pandas](https://blogs.oracle.com/datascience/introduction-to-correlation)
 
 
 
