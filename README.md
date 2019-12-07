@@ -49,8 +49,11 @@ OR, preferably, let's proceed in a sequential manner with the Exploratory Data A
 
 ***Correlation***
 Between two variables, this concept generally refers to to their ‘relatedness’. It allows for predictions about one variable based upon another.<br>
+Nevertheless, beware that “Correlation does not imply causation”. Spurious statistical associations can be found in a multitude of quantities, simply due to chance. Often, a relationship may appear to be causal through high correlation due to some unobserved variables.
 
-Nevertheless, beware that “Correlation does not imply causation”
+Assuming we deal with linear data,<br>
+the Pearson Correlation coefficient helps quantifying the degree to which a relationship between two variables can be described by a line. 
+
 
 
 
