@@ -10,10 +10,9 @@ We present a set of products in which we are trying to determine actions to perf
 The data files contain historical sales data and active inventory. More details below.
 
 
-* **Objective:**
-We want to determine which products from the store inventory should be retained to sell (in particular, applying promotional actions) and the ones to discard (or to decrease the orders).
-
-* **Goal:** Among possible ways forward, we intend to build a ***binary classifier*** with a list of products ID which could be retained in the inventory or list of products for which further actions need to be done.
+* **Goal:**
+1. We want to determine which products from the store inventory are (negatively) correlated, so that we can splitt them into the ones that should be retained for sell (in particular, applying promotional actions) and the ones to discard (or to decrease the amount of order requests).
+2. Among possible ways forward, we intend to build a ***binary classifier*** with a list of products ID which could be retained in the inventory or list of products for which further actions need to be done.
 
 **Dataset**
 In addition to all publicly available data, we have daily sales and associated waste for each product reaching back 1.5 year. We also have the physical location of a subset around 15% of products.
@@ -25,21 +24,34 @@ Dataset looks like this:
   65	  3123	Lösviktsgodis	159	2019-11-06	11	  3549.05	98	44.215
 
 We also have two months worth of receipts, e.g. for each transaction what products sold together along with timestamps (date) in a DataFrame with the following columns:<br>
+
 ***transaction_id	date	subtotal	number_of_items	ean	product	quantity	value	is_discount	incomplete_shopping***
 
 
 A few comments about the attributes included, as we realize we may have some attributes that are unnecessary or may need to be explained.
 
-    SKU_number: This is the unique identifier for each product.
-    EAN = standardized barcode and marked on most commercialized products currently available at the stores. EAN is a universal code throughout the world. ※ EAN=European Article Number
-    Ord_Akt = indicator of promotions
-    Order: Just a sequential counter. Can be ignored
-    SoldFlag: 1 = sold in past 6 mos. 0 = Not sold
-    MarketingType = Two categories of how we market the product. This should probably be ignored, or better yet, each type should be considered independently.
+    EAN : standardized barcode and marked on most commercialized products currently available at the stores. EAN is a universal code throughout the world. (EAN=European Article Number) Type int
+    Ord_Akt : indicator of promotions (type date)
+    date: timestamp variable of date type
+    value	is_discount : Type boolean
 
-    New_Release_Flag = Any product that has had a future release (i.e., Release Number > 1)
+<hr>
 
-<br>with</br>
+
+## Methods
+
+To proceed to Goal 1., we can either determine whether or not there is correlation within products data and, if negative value (eg. Pearson correlation coefficient PCC = -1), then identify specific products that meet this condition<br>
+OR, preferably, let's proceed in a sequential manner with the Exploratory Data Analysis: the first order of operations needed to get a grasp of the what, why, and how of the problem statement, i.e. analyzing the data set by summarizing its main characteristics then visualize them. 
+
+### Finding Correlations within products data
+
+**A bit of theory**
+
+***Correlation***
+Between two variables, this concept generally refers to to their ‘relatedness’. It allows for predictions about one variable based upon another.<br>
+
+Nevertheless, beware that “Correlation does not imply causation”
+
 
 
 
