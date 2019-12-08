@@ -54,13 +54,36 @@ Nevertheless, beware that “Correlation does not imply causation”. Spurious s
 Assuming we deal with linear data,<br>
 the ***Pearson Correlation coefficient*** (also known as Pearson's r, most common measure of correlation) helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as ***the covariance between two vectors, normalized by the product of their standard deviations***.<br>
 
-Let's briefly introduce the concept of covariance, that is of a statistical measure of association between two variables X and Y. Thus related to Pearson's r. 
-[covariance](img/covariance)
+Let's briefly introduce the concept of covariance, that is of a statistical measure of association between two variables X and Y. Thus related to Pearson's r.<br>
+[covariance](img/covariance)</br>
 When we have a variables sample of size N, [sample correlation](img/covariance)
 
-<code>To know more:</code>
+<i>To know more:</i>
 Each variable is centered by subtracting its mean; centered scores are multiplied together to measure whether the increase in one variable associates relates to the increase in another variable. Finally, the expected value (E) of the product of these centered scores is calculated as a sum of the association.<br>
-Note that expected value (or "expectation") is also known as average of a random variable, or mean μ, .
+Note that expected value (or "expectation") is also known as average of a random variable, or mean μ.
+[Expectation](img/mean)</br>
+
+***Implementation of covariance in python***<br>
+
+``` {code sample for two lists with objects of int type, represented here by products A and B}
+def mean(X):
+    return sum(X)/len(X)
+
+def covariance(X,Y):
+    calc = []
+    for i in range(len(X)):
+        Xi = X[i] - mean(X)
+        Yi = Y[i] - mean(Y)
+        calc.append(Xi * Yi)
+    return sum(calc)/(len(X) - 1)
+    
+A = [1,2,3,4,5] ; B = [5,4,3,2,1]
+print(covariance(A,B))
+```
+
+
+<b>Limitation</b>
+Covariance keeps the scale of the variables X and Y, and therefore can take on any value. This makes interpretation difficult and comparing covariances to each other impossible
 
 
 
@@ -69,7 +92,7 @@ Note that expected value (or "expectation") is also known as average of a random
 
 
 
-
+<hr>
 
 ### Reference
 [AlibabaCloudDocs/kvstore](https://github.com/AlibabaCloudDocs/kvstore/blob/master/intl.en-US/Best%20Practices/Build%20an%20e-commerce%20short-term%20sales%20promotion%20system%20by%20using%20ApsaraDB%20for%20Redis.md)<br>
@@ -81,7 +104,7 @@ Note that expected value (or "expectation") is also known as average of a random
 
 
 
-<hr>
+</hr>
 
 
 
