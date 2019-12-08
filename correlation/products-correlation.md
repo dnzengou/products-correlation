@@ -39,7 +39,7 @@ A few comments about the attributes included, as we realize we may have some att
 To meet Goal 1., we can either ***determine if there is correlation*** within products data and, if negative value (eg. Pearson correlation coefficient PCC = -1), then identify specific products that meet this condition<br>
 OR, preferably, we proceed in a sequential manner with the ***Exploratory Data Analysis***: the first order of operations needed to get a grasp of the what, why, and how of the problem statement, i.e. analyzing the data set by summarizing its main characteristics then visualize them. 
 
-### Finding Correlations within products data
+1. ### Finding Correlations within products data
 
 **A bit of theory**
 
@@ -48,7 +48,8 @@ Between two variables, this concept generally refers to to their ‘relatedness�
 Nevertheless, beware that “Correlation does not imply causation”. Spurious statistical associations can be found in a multitude of quantities, simply due to chance. Often, a relationship may appear to be causal through high correlation due to some unobserved variables.
 
 Assuming we deal with linear data,<br>
-the ***Pearson Correlation coefficient*** (also known as Pearson's r, most common measure of correlation) helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as ***the covariance between two vectors, normalized by the product of their standard deviations***. Alternatively, we can consider the correlation between X and Y as mathematically equivalent to the slope of the regression line of Y and X  to, standardized by the ratio of their standard deviations<br>
+**Pearson Correlation coefficient** </br>
+(also known as Pearson's r, most common measure of correlation) helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as ***the covariance between two vectors, normalized by the product of their standard deviations***. Alternatively, we can consider the correlation between X and Y as mathematically equivalent to the slope of the regression line of Y and X  to, standardized by the ratio of their standard deviations<br>
 
 Let's briefly introduce the concept of covariance, that is of a statistical measure of association between two variables X and Y. Thus related to Pearson's r.<br>
 ![covariance](img/covariance.png)</br>
@@ -115,8 +116,19 @@ By considering the data as arrow vectors in a high-dimensional space, we can use
 ![correlation direction](img/positively-zero-negatively-correlated-vectors.png)</br>
 
 
+In this exploration, we will limit ourselves to linear data. Nevertheless, we are presenting below just for information a couple of other expressions of the measure of correlation between variables: \n
+First, a special case of Pearson ρ applied to ranked (sorted) variables:<br>
+**Spearman Correlation** </br>
+But unlike Pearson, Spearman's correlation is not restricted to linear relationships. Rather than comparing means and variances, it measures the monotonic association (only strictly increasing or decreasing, but not mixed) between two variables X and Y and looks at the relative rank (or order of values) for each variable.\n
+![spearman](img/spearman.png)</br>
 
-### Exploratory Data Analysis on products data
+
+**Kendall's tau** </br>
+Also based on ranks between variables,but unlike Spearman Kendalls' τ does not take into account the difference between ranks — only directional agreement. Therefore, this coefficient is more appropriate for discrete data.\n
+![kendall](img/kendall.png)</br>
+
+
+2. ### Exploratory Data Analysis on products data
 
 
 
