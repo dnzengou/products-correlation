@@ -57,7 +57,7 @@ When we have a variables sample of size N, <img src="covariance.png" title="samp
 <i>To know more:</i>
 Each variable is centered by subtracting its mean; centered scores are multiplied together to measure whether the increase in one variable associates relates to the increase in another variable. Finally, the expected value (E) of the product of these centered scores is calculated as a sum of the association.<br>
 Note that expected value (or "expectation") is also known as average of a random variable, or mean μ.<br>
-[Expectation](mean.png)</br>
+![Expectation](mean.png)</br>
 
 ***Implementation of covariance in python***<br>
 
@@ -81,8 +81,8 @@ print(covariance(A,B))
 <b>Limitation</b><br>
 Covariance is scale-dependent, i.e. it keeps the scale of the variables X and Y; therefore can take on any value. This makes interpretation difficult and comparing covariances to each other impossible.<br>
 To obtain a more meaningful illustration of the association between variables (or between vectors -- see more details below), normalizing the covariance is needed.</br>
-[Pearson's r](pearson-correlation.png)<br>
-[Pearson's r](pearson-correlation0.png)<br>
+![Pearson's r](pearson-correlation.png)<br>
+![Pearson's r](pearson-correlation0.png)<br>
 
 where ρ represents the Pearson correlation (or r), σX and σY the standard deviations of each of the vectors.
 
@@ -108,10 +108,10 @@ print(Pearsons(A,B))
 ```
 
 The correlation coefficient rests between -1 and +1, thus characterising  it : negative, zero or negative correlation.<br>
-[correlation direction](positive-zero-negative-correlation.png)</br>
+![correlation direction](positive-zero-negative-correlation.png)</br>
 
 By considering the data as arrow vectors in a high-dimensional space, we can use the angle ϴ between both vector (here a and b, representing in code samples above lists or vectors of objects of type int) as a measure of similarity.<br>
-[correlation direction](positively-zero-negatively-correlated-vectors.png)</br>
+![correlation direction](img/positively-zero-negatively-correlated-vectors.png)</br>
 
 
 
