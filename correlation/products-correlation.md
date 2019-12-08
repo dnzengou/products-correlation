@@ -8,7 +8,7 @@ The data files contain historical sales data and active inventory. More details 
 
  * **Goal:**
 1. We want to determine which products from the store inventory are (negatively) correlated, so that we can splitt them into the ones that should be retained for sell (in particular, applying promotional actions) and the ones to discard (or to decrease the amount of order requests).
-2. Among possible ways forward, we intend to build a ***binary classifier*** with a list of products ID which could be retained in the inventory or list of products for which further actions need to be done.
+2. Among possible ways forward, we intend to build a binary classifier with a list of products ID which could be retained in the inventory or list of products for which further actions need to be done.
 
 * **Dataset**<br>
 In addition to all publicly available data, we have daily sales and associated waste for each product reaching back 1.5 year. We also have the physical location of a subset around 15% of products.
@@ -31,7 +31,9 @@ A few comments about the attributes included, as we realize we may have some att
     date: timestamp variable of date type
     value	is_discount : Type boolean
 
-<hr>
+
+<b>Note.</b><br>
+Ultimately we will merge both dataset into one ('EAN', 'quantity' are present in both dataset; value_is_discount relates to Ord_Akt), removing uneeded colums and perform feature engineering as/if needed, and perform analysis on variables interdependency (if any) for predictive analytics.
 
 
 ## Methods
