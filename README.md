@@ -14,7 +14,7 @@ The data files contain historical sales data and active inventory. More details 
 1. We want to determine which products from the store inventory are (negatively) correlated, so that we can splitt them into the ones that should be retained for sell (in particular, applying promotional actions) and the ones to discard (or to decrease the amount of order requests).
 2. Among possible ways forward, we intend to build a ***binary classifier*** with a list of products ID which could be retained in the inventory or list of products for which further actions need to be done.
 
-* **Dataset**
+* **Dataset**<br>
 In addition to all publicly available data, we have daily sales and associated waste for each product reaching back 1.5 year. We also have the physical location of a subset around 15% of products.
 
 Dataset looks like this:
@@ -40,8 +40,8 @@ A few comments about the attributes included, as we realize we may have some att
 
 ## Methods
 
-To proceed to Goal 1., we can either determine whether or not there is correlation within products data and, if negative value (eg. Pearson correlation coefficient PCC = -1), then identify specific products that meet this condition<br>
-OR, preferably, let's proceed in a sequential manner with the Exploratory Data Analysis: the first order of operations needed to get a grasp of the what, why, and how of the problem statement, i.e. analyzing the data set by summarizing its main characteristics then visualize them. 
+To meet Goal 1., we can either ***determine if there is correlation*** within products data and, if negative value (eg. Pearson correlation coefficient PCC = -1), then identify specific products that meet this condition<br>
+OR, preferably, we proceed in a sequential manner with the ***Exploratory Data Analysis***: the first order of operations needed to get a grasp of the what, why, and how of the problem statement, i.e. analyzing the data set by summarizing its main characteristics then visualize them. 
 
 ### Finding Correlations within products data
 
@@ -52,9 +52,15 @@ Between two variables, this concept generally refers to to their ‘relatedness�
 Nevertheless, beware that “Correlation does not imply causation”. Spurious statistical associations can be found in a multitude of quantities, simply due to chance. Often, a relationship may appear to be causal through high correlation due to some unobserved variables.
 
 Assuming we deal with linear data,<br>
-the ***Pearson Correlation coefficient*** (also known as Pearson' r, most common measure of correlation) helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as “the covariance between two vectors, normalized by the product of their standard deviations”.<br>
+the ***Pearson Correlation coefficient*** (also known as Pearson's r, most common measure of correlation) helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as ***the covariance between two vectors, normalized by the product of their standard deviations***.<br>
 
-Let's briefly introduce the concept of covariance, that is of a statistical measure of association between two variables X and Y. It is therefore related to Pearson's r.
+Let's briefly introduce the concept of covariance, that is of a statistical measure of association between two variables X and Y. Thus related to Pearson's r. 
+[covariance](img/covariance)
+When we have a variables sample of size N, [sample correlation](img/covariance)
+
+<code>To know more:</code>
+Each variable is centered by subtracting its mean; centered scores are multiplied together to measure whether the increase in one variable associates relates to the increase in another variable. Finally, the expected value (E) of the product of these centered scores is calculated as a sum of the association.<br>
+Note that expected value (or "expectation") is also known as average of a random variable, or mean μ, .
 
 
 
