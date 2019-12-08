@@ -82,6 +82,7 @@ print(covariance(A,B))
 Covariance is scale-dependent, i.e. it keeps the scale of the variables X and Y; therefore can take on any value. This makes interpretation difficult and comparing covariances to each other impossible.<br>
 To obtain a more meaningful illustration of the association between variables (or between vectors -- see more details below), normalizing the covariance is needed.</br>
 ![Pearson's r](img/pearson-correlation.png)<br>
+where E[(X - μX)(Y - μY)] = E[(X - E[X])(Y - E[Y])] = Cov(X,Y) </br>
 ![Pearson's r](img/pearson-correlation0.png)<br>
 
 where ρ represents the Pearson correlation (or r), σX and σY the standard deviations of each of the vectors.
