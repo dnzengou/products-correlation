@@ -23,8 +23,8 @@ Dataset looks like this:
   
 We also have two months worth of receipts, e.g. for each transaction what products sold together along with timestamps (date) in a DataFrame with the following columns:<br>
 
-***transaction_id	date	subtotal	number_of_items	ean	product	quantity	value	is_discount	incomplete_shopping***
-
+transaction_id	| date |	subtotal |	number_of_items |	ean	| product	|  quantity	| value_is_discount	| incomplete_shopping
+--- | --- | --- | --- | --- | --- | --- | --- | ---
 
 A few comments about the attributes included, as we realize we may have some attributes that are unnecessary or may need to be explained.
 
