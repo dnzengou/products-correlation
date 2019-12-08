@@ -52,7 +52,7 @@ Between two variables, this concept generally refers to to their ‘relatedness�
 Nevertheless, beware that “Correlation does not imply causation”. Spurious statistical associations can be found in a multitude of quantities, simply due to chance. Often, a relationship may appear to be causal through high correlation due to some unobserved variables.
 
 Assuming we deal with linear data,<br>
-the ***Pearson Correlation coefficient*** (also known as Pearson's r, most common measure of correlation) helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as ***the covariance between two vectors, normalized by the product of their standard deviations***.<br>
+the ***Pearson Correlation coefficient*** (also known as Pearson's r, most common measure of correlation) helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as ***the covariance between two vectors, normalized by the product of their standard deviations***. Alternatively, we can consider the correlation between X and Y as mathematically equivalent to the slope of the regression line of Y and X  to, standardized by the ratio of their standard deviations<br>
 
 Let's briefly introduce the concept of covariance, that is of a statistical measure of association between two variables X and Y. Thus related to Pearson's r.<br>
 [covariance](img/covariance)</br>
@@ -60,12 +60,12 @@ When we have a variables sample of size N, [sample correlation](img/covariance)
 
 <i>To know more:</i>
 Each variable is centered by subtracting its mean; centered scores are multiplied together to measure whether the increase in one variable associates relates to the increase in another variable. Finally, the expected value (E) of the product of these centered scores is calculated as a sum of the association.<br>
-Note that expected value (or "expectation") is also known as average of a random variable, or mean μ.
+Note that expected value (or "expectation") is also known as average of a random variable, or mean μ.<br>
 [Expectation](img/mean)</br>
 
 ***Implementation of covariance in python***<br>
 
-``` {code sample for two lists with objects of int type, represented here by products A and B}
+``` {code sample illustrated for two lists with objects, here of int type, represented here by products A and B.}
 def mean(X):
     return sum(X)/len(X)
 
@@ -82,10 +82,35 @@ print(covariance(A,B))
 ```
 
 
-<b>Limitation</b>
-Covariance keeps the scale of the variables X and Y, and therefore can take on any value. This makes interpretation difficult and comparing covariances to each other impossible
+<b>Limitation</b><br>
+Covariance is scale-dependent, i.e. it keeps the scale of the variables X and Y; therefore can take on any value. This makes interpretation difficult and comparing covariances to each other impossible.<br>
+To obtain a more meaningful illustration of the association between variables (or between vectors -- see more details below), normalizing the covariance is needed.</br>
+[Pearson's r](img/pearson)<br>
+
+where ρ represents the Pearson correlation (or r), σX and σY the standard deviations of each of the vectors.
 
 
+***Implementation of Pearson correlation in python***<br>
+
+``` {code sample illustrated for two lists with objects, here of int type, represented here by products A and B}
+  
+import math
+
+def stDev(X):
+    variance = 0
+    for i in X:
+        variance += (i - mean(X) ** 2) / len(X)
+    return math.sqrt(variance)
+    
+def Pearsons(X,Y):
+    cov = covariance(X,Y)
+    return cov / (stDev(X) * stDev(Y))
+    
+A = [1,2,3,4,5] ; B = [5,4,3,2,1]
+print(Pearsons(A,B))
+```
+
+the correlation coefficient between -1 and +1.
 
 
 ### Exploratory Data Analysis on products data
