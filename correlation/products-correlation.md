@@ -39,7 +39,7 @@ A few comments about the attributes included, as we realize we may have some att
 To meet Goal 1., we can either ***determine if there is correlation*** within products data and, if negative value (eg. Pearson correlation coefficient PCC = -1), then identify specific products that meet this condition<br>
 OR, preferably, we proceed in a sequential manner with the ***Exploratory Data Analysis***: the first order of operations needed to get a grasp of the what, why, and how of the problem statement, i.e. analyzing the data set by summarizing its main characteristics then visualize them. 
 
-* ###Finding Correlations within products data
+### 1. Finding Correlations within products data
 
 **A bit of theory**
 
@@ -84,7 +84,7 @@ Covariance is scale-dependent, i.e. it keeps the scale of the variables X and Y;
 To obtain a more meaningful illustration of the association between variables (or between vectors -- see more details below), normalizing the covariance is needed.</br>
 ![Pearson's r](img/pearson-correlation.png)<br>
 ![Pearson's r](img/pearson-correlation0.png)<br>
-where E[(X - μX)(Y - μY)] = E[(X - E[X])(Y - E[Y])] = Cov(X,Y) </br>
+where <i>E[(X - μX)(Y - μY)] = E[(X - E[X])(Y - E[Y])] = Cov(X,Y) </i>
 ρ represents the Pearson correlation (or r), σX and σY the standard deviations of each of the vectors.
 
 
@@ -108,15 +108,21 @@ A = [1,2,3,4,5] ; B = [5,4,3,2,1]
 print(Pearsons(A,B))
 ```
 
-The correlation coefficient rests between -1 and +1, thus characterising  it : negative, zero or negative correlation.<br>
-![correlation direction](img/positive-zero-negative-correlation.png)</br>
+***See more here***<br>
+![products-correlation](products-correlation.ipynb)</br>
 
-By considering the data as arrow vectors in a high-dimensional space, we can use the angle ϴ between both vector (here a and b, representing in code samples above lists or vectors of objects of type int) as a measure of similarity.<br>
-![correlation direction](img/positively-zero-negatively-correlated-vectors.png)</br>
+
+The correlation coefficient rests between -1 and +1, thus characterising  it : negative, neutral or negative correlation.<br>
+![correlation direction](img/positive-zero-negative-correlation.png)</br>
+A correlation could be positive, meaning both variables move in the same direction, or negative, meaning that when one variable’s value increases, the other variables’ values decrease. Correlation can also be neural or zero, meaning that the variables are unrelated.<br>
+
+By considering the data as arrow vectors in a high-dimensional space, we can use the angle ϴ between both vector (here a and b, representing in code samples above lists or vectors of objects of type int) as a measure of similarity.</br>
+![correlation direction](img/positively-zero-negatively-correlated-vectors.png)<br>
 
 
 In this exploration, we will limit ourselves to linear data. Nevertheless, we are presenting below just for information a couple of other expressions of the measure of correlation between variables: first, a special case of Pearson ρ applied to ranked (sorted) variables:<br>
-**Spearman Correlation** </br>
+</br>
+**Spearman Correlation** <br>
 But unlike Pearson, Spearman's correlation is not restricted to linear relationships. Rather than comparing means and variances, it measures the monotonic association (only strictly increasing or decreasing, but not mixed) between two variables X and Y and looks at the relative rank (or order of values) for each variable.<br>
 ![spearman](img/spearman.png)</br>
 
@@ -128,6 +134,9 @@ Also based on ranks between variables,but unlike Spearman Kendalls' τ does not 
 
 ### 2. Exploratory Data Analysis on products data
 
+
+***See more here***<br>
+![eda](eda.ipynb)</br>
 
 
 <hr>
