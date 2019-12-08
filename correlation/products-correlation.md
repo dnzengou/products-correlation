@@ -147,6 +147,7 @@ Also based on ranks between variables,but unlike Spearman Kendalls' τ does not 
 [Finding Correlations in Non-Linear Data](https://www.freecodecamp.org/news/how-machines-make-predictions-finding-correlations-in-complex-data-dfd9f0d87889/)<br>
 [Exploratory Data Analysis (EDA) and Data Visualization with Python](https://kite.com/blog/python/data-analysis-visualization-python/)<br>
 [Introduction to Correlation with pandas](https://blogs.oracle.com/datascience/introduction-to-correlation)
+[Correlation Between Variables in Python](https://machinelearningmastery.com/how-to-use-correlation-to-understand-the-relationship-between-variables/)
 
 
 
