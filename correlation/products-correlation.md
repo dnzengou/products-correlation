@@ -15,14 +15,16 @@ In addition to all publicly available data, we have daily sales and associated w
 
 Dataset looks like this:
 
-***EAN 	BEN	  VGR	          DATUM	  Ord_Akt	FSG	  ANTAL	  ANTAL_KG***<br>
-  64	  3123	Lösviktsgodis	159	2019-11-05	11	  3913.86	106	48.760
-  65	  3123	Lösviktsgodis	159	2019-11-06	11	  3549.05	98	44.215
+| EAN     | BEN   | VGR           |DATUM   |Ord_Akt    |FSG |ANTAL    |ANTAL_KG     |
+| --------|:----:| -------------:| ------:| ----------:|---:| -------:| -----------:|
+| 64      | 3123 | Lösviktsgodis |159     |2019-11-05  |11  |3913.86  |106	48.760  |
+| 65      | 3123 | Lösviktsgodis |159     |2019-11-05  |11  |3913.86  |98	44.215    |
 
+  
 We also have two months worth of receipts, e.g. for each transaction what products sold together along with timestamps (date) in a DataFrame with the following columns:<br>
 
-***transaction_id	date	subtotal	number_of_items	ean	product	quantity	value	is_discount	incomplete_shopping***
-
+transaction_id	| date |	subtotal |	number_of_items |	ean	| product	|  quantity	| value_is_discount	| incomplete_shopping
+--- | --- | --- | --- | --- | --- | --- | --- | ---
 
 A few comments about the attributes included, as we realize we may have some attributes that are unnecessary or may need to be explained.
 
