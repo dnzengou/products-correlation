@@ -15,8 +15,8 @@ In addition to all publicly available data, we have daily sales and associated w
 
 Dataset looks like this:
 
-| EAN     | BEN   | VGR           |DATUM   |Ord_Akt     |FSG |ANTAL    |ANTAL_KG     |
-| --------|:----:| -------------:| ------:| ----------:|---:| -------:| ----000000-:|
+| EAN     | BEN   | VGR           |DATUM   |Ord_Akt    |FSG |ANTAL    |ANTAL_KG     |
+| --------|:----:| -------------:| ------:| ----------:|---:| -------:| -----------:|
 | 64      | 3123 | Lösviktsgodis |159     |2019-11-05  |11  |3913.86  |106	48.760  |
 | 65      | 3123 | Lösviktsgodis |159     |2019-11-05  |11  |3913.86  |98	44.215    |
 
