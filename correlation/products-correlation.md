@@ -51,8 +51,8 @@ Assuming we deal with linear data,<br>
 the ***Pearson Correlation coefficient*** (also known as Pearson's r, most common measure of correlation) helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as ***the covariance between two vectors, normalized by the product of their standard deviations***. Alternatively, we can consider the correlation between X and Y as mathematically equivalent to the slope of the regression line of Y and X  to, standardized by the ratio of their standard deviations<br>
 
 Let's briefly introduce the concept of covariance, that is of a statistical measure of association between two variables X and Y. Thus related to Pearson's r.<br>
-[covariance](covariance.png)</br>
-When we have a variables sample of size N, [sample correlation](covariance.png)
+![covariance](covariance.png)</br>
+When we have a variables sample of size N, <img src="covariance.png" title="sample correlation">
 
 <i>To know more:</i>
 Each variable is centered by subtracting its mean; centered scores are multiplied together to measure whether the increase in one variable associates relates to the increase in another variable. Finally, the expected value (E) of the product of these centered scores is calculated as a sum of the association.<br>
