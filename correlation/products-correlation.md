@@ -39,7 +39,7 @@ A few comments about the attributes included, as we realize we may have some att
 To meet Goal 1., we can either ***determine if there is correlation*** within products data and, if negative value (eg. Pearson correlation coefficient PCC = -1), then identify specific products that meet this condition<br>
 OR, preferably, we proceed in a sequential manner with the ***Exploratory Data Analysis***: the first order of operations needed to get a grasp of the what, why, and how of the problem statement, i.e. analyzing the data set by summarizing its main characteristics then visualize them. 
 
-1. ### Finding Correlations within products data
+* ###Finding Correlations within products data
 
 **A bit of theory**
 
@@ -83,10 +83,9 @@ print(covariance(A,B))
 Covariance is scale-dependent, i.e. it keeps the scale of the variables X and Y; therefore can take on any value. This makes interpretation difficult and comparing covariances to each other impossible.<br>
 To obtain a more meaningful illustration of the association between variables (or between vectors -- see more details below), normalizing the covariance is needed.</br>
 ![Pearson's r](img/pearson-correlation.png)<br>
-where E[(X - μX)(Y - μY)] = E[(X - E[X])(Y - E[Y])] = Cov(X,Y) </br>
 ![Pearson's r](img/pearson-correlation0.png)<br>
-
-where ρ represents the Pearson correlation (or r), σX and σY the standard deviations of each of the vectors.
+where E[(X - μX)(Y - μY)] = E[(X - E[X])(Y - E[Y])] = Cov(X,Y) </br>
+ρ represents the Pearson correlation (or r), σX and σY the standard deviations of each of the vectors.
 
 
 ***Implementation of Pearson correlation in python***<br>
@@ -116,19 +115,18 @@ By considering the data as arrow vectors in a high-dimensional space, we can use
 ![correlation direction](img/positively-zero-negatively-correlated-vectors.png)</br>
 
 
-In this exploration, we will limit ourselves to linear data. Nevertheless, we are presenting below just for information a couple of other expressions of the measure of correlation between variables: \n
-First, a special case of Pearson ρ applied to ranked (sorted) variables:<br>
+In this exploration, we will limit ourselves to linear data. Nevertheless, we are presenting below just for information a couple of other expressions of the measure of correlation between variables: first, a special case of Pearson ρ applied to ranked (sorted) variables:<br>
 **Spearman Correlation** </br>
-But unlike Pearson, Spearman's correlation is not restricted to linear relationships. Rather than comparing means and variances, it measures the monotonic association (only strictly increasing or decreasing, but not mixed) between two variables X and Y and looks at the relative rank (or order of values) for each variable.\n
+But unlike Pearson, Spearman's correlation is not restricted to linear relationships. Rather than comparing means and variances, it measures the monotonic association (only strictly increasing or decreasing, but not mixed) between two variables X and Y and looks at the relative rank (or order of values) for each variable.<br>
 ![spearman](img/spearman.png)</br>
 
 
 **Kendall's tau** </br>
-Also based on ranks between variables,but unlike Spearman Kendalls' τ does not take into account the difference between ranks — only directional agreement. Therefore, this coefficient is more appropriate for discrete data.\n
+Also based on ranks between variables,but unlike Spearman Kendalls' τ does not take into account the difference between ranks — only directional agreement. Therefore, this coefficient is more appropriate for discrete data.<br>
 ![kendall](img/kendall.png)</br>
 
 
-2. ### Exploratory Data Analysis on products data
+### 2. Exploratory Data Analysis on products data
 
 
 
