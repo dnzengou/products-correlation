@@ -53,7 +53,10 @@ Assuming we deal with linear data,<br>
 
 Let's briefly introduce the concept of covariance, that is of a statistical measure of association between two variables X and Y. Thus related to Pearson's r.<br>
 ![covariance](img/covariance.png)</br>
-When we have a variables sample of size N: <img src="img/covariance.png" title="sample correlation">
+When we have a variables sample of size N: <img src="img/covariance.png" title="sample correlation"><br>
+
+The use of the mean in the calculation suggests the need for each data sample to have a probability distribution following a Gaussian or Gaussian-like.</br>
+The sign of the covariance can be interpreted as follows: if positive, the two variables change in the same direction; change in different directions if negative. A covariance value null indicates that variables are independent.
 
 <i>To know more:</i>
 Each variable is centered by subtracting its mean; centered scores are multiplied together to measure whether the increase in one variable associates relates to the increase in another variable. Finally, the expected value (E) of the product of these centered scores is calculated as a sum of the association.<br>
