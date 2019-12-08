@@ -51,13 +51,13 @@ Assuming we deal with linear data,<br>
 the ***Pearson Correlation coefficient*** (also known as Pearson's r, most common measure of correlation) helps quantifying the degree to which a relationship between two variables can be described by a line. Mathematically, it is defined as ***the covariance between two vectors, normalized by the product of their standard deviations***. Alternatively, we can consider the correlation between X and Y as mathematically equivalent to the slope of the regression line of Y and X  to, standardized by the ratio of their standard deviations<br>
 
 Let's briefly introduce the concept of covariance, that is of a statistical measure of association between two variables X and Y. Thus related to Pearson's r.<br>
-[covariance](img/covariance.png)</br>
-When we have a variables sample of size N, [sample correlation](img/covariance.png)
+[covariance](covariance.png)</br>
+When we have a variables sample of size N, [sample correlation](covariance.png)
 
 <i>To know more:</i>
 Each variable is centered by subtracting its mean; centered scores are multiplied together to measure whether the increase in one variable associates relates to the increase in another variable. Finally, the expected value (E) of the product of these centered scores is calculated as a sum of the association.<br>
 Note that expected value (or "expectation") is also known as average of a random variable, or mean μ.<br>
-[Expectation](img/mean.png)</br>
+[Expectation](mean.png)</br>
 
 ***Implementation of covariance in python***<br>
 
@@ -81,8 +81,8 @@ print(covariance(A,B))
 <b>Limitation</b><br>
 Covariance is scale-dependent, i.e. it keeps the scale of the variables X and Y; therefore can take on any value. This makes interpretation difficult and comparing covariances to each other impossible.<br>
 To obtain a more meaningful illustration of the association between variables (or between vectors -- see more details below), normalizing the covariance is needed.</br>
-[Pearson's r](img/pearson-correlation.png)<br>
-[Pearson's r](img/pearson-correlation0.png)<br>
+[Pearson's r](pearson-correlation.png)<br>
+[Pearson's r](pearson-correlation0.png)<br>
 
 where ρ represents the Pearson correlation (or r), σX and σY the standard deviations of each of the vectors.
 
@@ -108,10 +108,10 @@ print(Pearsons(A,B))
 ```
 
 The correlation coefficient rests between -1 and +1, thus characterising  it : negative, zero or negative correlation.<br>
-[correlation direction](img/positive-zero-negative-correlation.png)</br>
+[correlation direction](positive-zero-negative-correlation.png)</br>
 
 By considering the data as arrow vectors in a high-dimensional space, we can use the angle ϴ between both vector (here a and b, representing in code samples above lists or vectors of objects of type int) as a measure of similarity.<br>
-[correlation direction](img/positively-zero-negatively-correlated-vectors.png)</br>
+[correlation direction](positively-zero-negatively-correlated-vectors.png)</br>
 
 
 
